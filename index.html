@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANNERS CARFA - LIVES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/general.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <input type="text" id="inputTitle" placeholder="Escribe el título aquí...">
+        
+        <div class="icon-selector">
+            <label class="icon-option">
+                <input type="radio" name="techIcon" value="python" checked>
+                <i class="fab fa-python" style="color: #3776AB;"></i>
+            </label>
+            <label class="icon-option">
+                <input type="radio" name="techIcon" value="js">
+                <i class="fab fa-js" style="color: #F7DF1E;"></i>
+            </label>
+            <label class="icon-option">
+                <input type="radio" name="techIcon" value="java">
+                <i class="fab fa-java" style="color: #007396;"></i>
+            </label>
+            <label class="icon-option">
+                <input type="radio" name="techIcon" value="html">
+                <i class="fab fa-html5" style="color: #E34F26;"></i>
+            </label>
+            <label class="icon-option">
+                <input type="radio" name="techIcon" value="php">
+                <i class="fab fa-php" style="color: #777BB4;"></i>
+            </label>
+        </div>
+
+        <button class="btn-save" onclick="addNewItem()">Guardar</button>
+    </div>
+
+    <div class="saved-list" id="savedList">
+        <div class="bar-wrapper">
+            <div class="tech-bar">
+                <div class="marquee-container">
+                    <div class="marquee-content">
+                        <i class="fab fa-python" style="color: #3776AB;"></i>
+                        <h2>ANALIZAMOS EL FÚTBOL ARGENTINO</h2>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-delete" onclick="this.parentElement.remove()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="/javascript/funciones.js"></script>
+</body>
+</html>
